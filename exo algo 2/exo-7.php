@@ -9,7 +9,3 @@ foreach ($elements as $key => $value){
 }
 genererCheckbox($elements);
 ?>
-<!-- // michka j'ai passé plusieurs heures sur cette exercice sans recherche sur internet
- ,entre les petits points ' qui font des erreurs partout et le <br/> que j'ai trouvé au hasard sans comprendre
- c'est un peu un coups de chance, faudra que tu m'expliques tout cela -->
-  
