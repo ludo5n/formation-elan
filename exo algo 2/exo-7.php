@@ -1,8 +1,8 @@
-<?php $elements = array("case1" => "", "case2" => "", "case3" => "checked");
+<?php $elements = array("choix1" => "", "choix2" => "", "choix3" => "checked");
 function genererCheckbox($elements){
     // echo "<form>";
 foreach ($elements as $key => $value){
-     return "<input type='checkbox'name='$key'>$key </input><label for='$key'>$value</label><br/>";
+     echo "<input type='checkbox'name='$key'> $key</input><label for='$key'>$value</label><br/>";
      
     } ;
     // echo "</form>";
