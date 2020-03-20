@@ -1,0 +1,187 @@
+body{
+    margin: auto;
+    width:1200px
+    
+}
+p{
+    text-align: justify;
+}
+#wrap{
+width:80%;
+margin: auto;
+padding:10px;
+box-sizing: border-box;
+}
+nav {
+    width:100%;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-around;
+    align-items: flex-end;
+}
+nav a{
+    justify-content: space-between;
+    color: black;
+    text-decoration:none;
+    margin-bottom: 10px;
+}
+#banniere{
+        width: 100%;
+    height:300px;
+   background: url(../img/carte.jpg) center/cover no-repeat ;
+}
+
+figure{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    position: relative;
+}
+figcaption{ 
+    /* position: absolute; */
+   
+background-color: rgb(245, 65, 79,0.5);
+display: flex;
+justify-content: space-between;
+
+/* background-color: transparent; */
+color: white;
+position: absolute;
+bottom: 0px;
+left:0px;
+width:100%;
+ align-items: center;
+}
+figcaption a{
+    color:white;
+    padding:5px 12px;
+     border-radius:9% ;
+     border: 1px solid;
+    text-decoration: none;
+   background-color: rgb(252, 70, 66);
+    margin:5px;
+}
+figcaption p{
+  
+    align-items: center;
+}
+header #titre{
+    display: flex;
+    flex-direction: row;
+}
+#ptlogo{
+    height:20px;
+}
+/* -----------------------------------------------------------main--------------------------------------- */
+main{
+    display:flex;
+    margin-top:5px;
+    border-bottom: 1px solid rgb(252, 70, 66);
+}
+aside{
+    width:30%;
+    height: auto;
+    background: linear-gradient(rgb(248, 4, 4), rgb(204, 197, 197));
+    flex: 1;
+    background-color: rgb(252, 70, 66);
+      padding:0px 10px;
+}
+aside header{
+    justify-content: center;
+    
+     text-align: center;
+}
+
+#am{
+   display: flex;
+    flex-direction: row;
+    height: 100%;
+    
+}
+#aim{
+    width:50%;
+    height:100px;
+}
+#s1{
+  flex:2;
+}  
+#s1 img{
+border: 1px solid black;
+}
+#s1 p{
+    margin-right: 20px;
+}
+#s1 h1 #text{
+    padding:200px;
+}
+#logo1 img{
+    height:100px;
+    
+}
+aside footer{
+    display: flex;
+    background: linear-gradient(#222, #888);
+   
+}
+aside footer img{
+    flex:1;
+    width:70%;
+    height: auto;
+   
+}
+/* ------------------------------------------------footer----------------------------------------------- */
+
+footer{
+    display:flex;
+    flex-direction: row;
+}
+#new{
+    flex:1;
+    flex-direction: column;
+}
+#galerie{
+    flex:1;
+     
+    
+     
+}
+#galerie section{
+    justify-content: space-around;
+    display: flex;
+}
+#galerie section img{
+    /* height:62px; */
+    width: 100%;
+}
+/* #galerie section {
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+} */
+#partenaire{
+    flex:1;
+   
+}
+#partenaire section{
+    width:100%;
+    display: flex;
+    
+}
+#partenaire img{
+    flex:1;
+   width: 100%; 
+   height: auto;
+}
+#innom{
+    margin-bottom:6px; 
+   padding:3px;
+   }
+#inmail{
+    padding:3px; 
+}
+#ok{
+    background-color: rgb(226, 64, 64);
+    color:white;
+}
