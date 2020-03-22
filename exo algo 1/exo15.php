@@ -26,3 +26,9 @@ echo "exo15 <br>";
  $p1-> sePresenter();
  $p2-> sePresenter(); // on appelle la fonction
  ?>
+<?php
+// //on peux utiliser la methode
+// public function__toString(){
+//    return this->_nom."".this->_prenom
+//    pour avoir un raccourcis en faisant echo $p1(qui remplace this->_nom)
+// }

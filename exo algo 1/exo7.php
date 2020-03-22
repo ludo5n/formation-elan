@@ -29,3 +29,19 @@ switch(true){
 }
 
 echo "L'enfant qui a $age ans appartient à la catégorie : $cat";
+?>
+<br>
+<?php
+$age = 15;
+if ($age>11){ 
+   echo"L'enfant qui a $age ans appartient a la categorie Cadet";
+   }else if ($age >9){
+       echo"L'enfant qui a $age ans appartient a la categorie Minime";
+       }else if ($age >7){
+           echo"L'enfant qui a $age ans appartient a la categorie Pupille";
+           }else if($age >5) { 
+               echo"L'enfant qui a $age ans apartient a la categorie Poussin"; 
+               }else { 
+                   echo ("trop petit"); 
+}
+?>

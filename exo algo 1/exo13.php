@@ -7,14 +7,16 @@ $res = array_sum($notes);
 // on affiche la somme des notes (contenu dans le tableau)
 echo "la somme de toutes les notes est de : " . $res;
 echo "<br>";
-//on divise la somme des notes par le nombre de notes (count() permet de compter le nombre d'�l�ment dans un tableau)
+//on divise la somme des notes par le nombre de notes (count() permet de compter le nombre d'�l�ment dans un tableau en php)
 $res = $res/count($notes);
 
-echo "Les notes obtenus par l'eleve sont : " ;
-foreach($notes as $element)
-{
-    echo $element . " "; 
-}
+// echo "Les notes obtenus par l'eleve sont : " ;
+// foreach($notes as $element)
+// {
+//     echo $element . " "; 
+// }
+$afficher = implode($notes);
+echo "$afficher";
 echo "<br>";
 // on affiche la moyenne arrondie. round() prend au minimum un param�tre (la valeur � arrondir) et jusqu'� trois param�tres. 
 // Le deuxieme parametre de round() est le nombre de decimale apr�s la virgule

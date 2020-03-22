@@ -1,7 +1,7 @@
 <?php
 echo "exo9;<br>";
 $sexe = 1 ;
- $age =10;
+$age =10;
   if ($sexe == 1 && $age > 20){
        echo("faut aller payez macron!"); 
     } else if($sexe == 2 && $age > 17 && $age<= 36){
@@ -9,4 +9,15 @@ $sexe = 1 ;
         }else {
              echo(" c'est bon garde tes sous,pour l'instant..!");
              }
+?>
+<br>
+<?php
+$sexe = 1 ;
+$age =13;
+  if ($sexe == 1 && $age>20||$sexe==2 && $age > 17 && $age<36)
+  {
+     echo("faut aller payez macron!"); 
+  }else {
+     echo(" c'est bon garde tes sous,pour l'instant..!");
+  }
 ?>
