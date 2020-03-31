@@ -19,9 +19,9 @@ class Voiture {
         public function getNbPortes(){
             return $this->nbPortes;
         }
-        // public function __toString(){
-        //     return "La voiture " . $this->getMarque()." ".$this->getModele()." possède ".$this->getNbPortes(). " portes";
-        // }
+        public function __toString(){
+            return "La voiture " . $this->getMarque()." ".$this->getModele()." possède ".$this->getNbPortes(). " portes"."<br>";
+        }
         public function infovehicule(){
             return "La voiture " . $this->getMarque()." ".$this->getModele()." possède ".$this->getNbPortes(). " portes "."<br>". $this->demarrer(). $this->getvitesseActuelle();
         }

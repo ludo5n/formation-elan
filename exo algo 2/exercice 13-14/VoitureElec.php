@@ -10,4 +10,10 @@ class VoitureElec extends Voiture {
         $this->autonomie = $autonomie;
 
     }
+    public function __toString() {
+			
+        return parent::__toString(). "et une autonomie de" ."<br>".$this->autonomie
+        ." km.";
+    }
 }
+?>

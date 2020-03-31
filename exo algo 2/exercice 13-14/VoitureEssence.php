@@ -10,4 +10,9 @@ class VoitureEssence extends Voiture {
         $this->reservoir = $reservoir;
 
     }
+    public function __toString() {
+			
+        return parent::__toString()."possedant un reservoir de".$this->reservoir."litre";
+    }
 }
+?>
