@@ -28,7 +28,7 @@ right:0;
       cursor:pointer;
 } 
 .fa-cog{
-     color:(49,124,71);
+     color:rgb(49,124,71);
 }
 .far {
      color: rgb(49, 124, 71);
@@ -471,7 +471,7 @@ background: url(../img/rui2.jpeg)center/cover no-repeat;
      height: 150px;
      color:white;
      text-align: center;
-padding:150 0;
+padding:150px 0;
 }
 #newhorizon h2{
      margin-block-start: 0em;
@@ -496,7 +496,7 @@ padding:150 0;
       transition:0.5s;
       font-size: smaller;
       text-align: center;     
-      margin:50 0px;
+      margin:50px 0px;
 }
    
    #newsletter a:hover {
