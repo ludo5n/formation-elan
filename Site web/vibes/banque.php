@@ -25,5 +25,17 @@ class Compte{
             return $this->Titulaire;
         }
 
+        public function __toString()
+        {
+            
+            $display = "La banque s'appelle 
+            $this->libelle qui a un solde de  $this->solde quib est en devise $this->devise , 
+            de numero $this->numero, dont le titutalaire est $this->Titulaire<br>
+            Il detient les comptes suivant : <br><br>";
+            // foreach ($this->account as $value) {
+            //     $display .= "$value<br>";
+            // }
+            return $display;
+        }
 
 }
