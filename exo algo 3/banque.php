@@ -2,14 +2,16 @@
 class Compte{
     private $libelle;
     private $solde=100;
-    private $devise=€;
+    private $devise="€";
     private $Titulaire;
-        public function__construct($libelle,$solde,$devise,$Titulaire){
-            
+    private $numero;
+        public function __construct(string $libelle, int $solde, string $devise,$Titulaire, int $numero){
             $this->libelle = $libelle;
             $this->solde = $solde;
             $this->devise = $devise;
-             $compte = [$this->libelle, $this->solde, $this->devise, $this->numero];
+            $this->numero = $numero;
+            $this->Titulaire =$Titulaire;
+            $compte = [$this->libelle, $this->solde, $this->devise, $this->numero];
             array_push($Titulaire->comptes, $compte);
         }
         public function getLibelle(){
@@ -24,18 +26,17 @@ class Compte{
         public function getTitulaire(){
             return $this->Titulaire;
         }
-
+        public function getnumero(){
+            return $this->numero;
+        }
         public function __toString()
-        {
-            
-            $display = "La banque s'appelle 
-            $this->libelle qui a un solde de  $this->solde quib est en devise $this->devise , 
-            de numero $this->numero, dont le titutalaire est $this->Titulaire<br>
-            Il detient les comptes suivant : <br><br>";
-            // foreach ($this->account as $value) {
-            //     $display .= "$value<br>";
-            // }
-            return $display;
+        { 
+             $display =  $this->libelle $this->solde $this->devise $this->numero $this->Titulaire;
+            // Il detient les comptes suivant : <br><br>";
+            // // foreach ($this->account as $value) {
+            // //     $display .= "$value<br>";
+            // // }
+            return $display ;
         }
 
 }
