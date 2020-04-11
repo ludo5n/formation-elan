@@ -1,16 +1,15 @@
-#tableau{
+ #tableau{
     width: 600px;
     margin:auto;
     border:2px solid black;
+    border-collapse: collapse;
     
-}
+} 
 #wrapper{
     width:1024px;
     
-}
-#wrapper #tableau {
-    text-align:center;
-    align-items: center;
-    vertical-align: center;
-    margin: auto;
+} 
+h1{
+    color:black;
+    text-align: center;
 }

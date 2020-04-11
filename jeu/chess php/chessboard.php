@@ -8,6 +8,7 @@
 </head>
 <body>
     <div wrapper>
+    <h1>CHESSBOARD</h1>
         <table id=tableau>
             <?php
             for($row = 1 ; $row <= 8; $row++)
@@ -18,11 +19,11 @@
                         $total = $row +$col;
                         if($total % 2 == 0 )
                         {
-                            echo "<td height = 40 px width = 40 px bgcolor = #FFFFFF></td>";
+                            echo "<td  height = 60 px width = 60 px bgcolor = #FFFFFF></td>";
                         }
                         else
                         {
-                            echo "<td height = 4px width = 40px bgcolor = #000000></td> ";                    }
+                            echo "<td height = 60px width = 60px bgcolor = #000000></td> ";                    }
                         }
                 }
                         echo"</tr>";
