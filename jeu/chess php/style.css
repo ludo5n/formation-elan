@@ -1,0 +1,16 @@
+#tableau{
+    width: 600px;
+    margin:auto;
+    border:2px solid black;
+    
+}
+#wrapper{
+    width:1024px;
+    
+}
+#wrapper #tableau {
+    text-align:center;
+    align-items: center;
+    vertical-align: center;
+    margin: auto;
+}

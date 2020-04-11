@@ -1,0 +1,190 @@
+:root {
+  --main-color: #6aa821;
+  --main-color-darker: #2a8811;
+}
+*{
+	box-sizing: border-box;
+}
+/*---------------------------GLOBAL RULES------------------------------*/
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+}
+/*--------------------------END GLOBAL RULES---------------------------*/
+html, body{
+	width: 100%;
+	min-height: 100%;
+	font-family: 'Mukta', sans-serif;
+	font-size: 16px;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+#wrapper{
+	max-width: 1024px;
+	margin: auto;
+	padding: 1em;
+}
+header{
+	align-items: flex-end;
+}
+header #logo img{
+	height: 100px;
+}
+header nav{
+	flex: 1;
+	text-align: center;
+	margin-bottom: 1em;
+}
+header nav a{
+	margin: 0 2em;
+	font-weight: bold;
+}
+header nav a:hover{
+	margin: 0 2em -0.8em;
+	padding-bottom: 0.8em;
+	border-bottom: 3px solid var(--main-color);
+	color: var(--main-color);
+}
+#banner{
+	height: 15em;
+	position: relative;
+	margin: 0;
+}
+#banner img{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+#banner figcaption{
+	width: 100%;
+	background-color: rgba(0,75,0,0.5);
+	color: #fff;
+	margin: 0;
+	padding: 0.5em;
+	position: absolute;
+	bottom: 0;
+	justify-content: space-between;
+	align-items: center;
+}
+#banner figcaption a{
+	background-color: var(--main-color);
+	padding: 0.5em;
+	border-radius: 0.5em;
+}
+#banner figcaption a:hover{
+	background-color: var(--main-color-darker);
+}
+#home-article h2{
+	padding-left: 1.5em;
+	background: transparent url('./img/nvidia-eye.png') no-repeat top left;
+	background-size: 1em 1em;
+}
+main{
+	padding: 1em 0 0 0;
+	border-bottom: 2px solid var(--main-color);
+}
+main article{
+	flex: 2;
+	padding-bottom: 1em;
+}
+main aside{
+	flex: 1;
+	margin-left: 1em;
+	padding: 0 1em;
+	background-color: var(--main-color);
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+}
+#aside-body{
+	flex: 1;
+}
+aside h2, #flag{
+	text-align: center;
+}
+#flag img{
+	height: 100px;
+}
+#socials{
+	display: flex;
+	justify-content: space-evenly;
+}
+#socials a:hover{
+	text-shadow: 0px 0px 5px #fff;
+}
+#tribtn{
+	text-align: center;
+}
+#tribtn img{
+	height: 2em;
+	margin-top: -6px;
+}
+footer>section:not(:first-child){
+	padding-left: 1em;
+}
+footer>section:first-child{
+	flex: 1;
+}
+footer form input:not(.valid){
+	padding: 0.5em;
+	margin-bottom: 0.5em;
+}
+footer form .valid{
+	padding: 0.5em 1em;
+	background-color: var(--main-color);
+	color: #fff;
+	border: none;
+}
+footer form .valid:hover{
+	background-color: var(--main-color-darker);
+}
+#gallery a, #brands a{
+	width: 80px;
+	height: 80px;
+	margin-right: 0.5em;
+}
+#gallery a{
+	overflow: hidden;
+	border: 0px solid var(--main-color);
+	transition: border-width 0.5s;
+}
+#gallery a img, #brands a img{
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	transition: transform 0.8s;
+}
+#gallery a:hover{
+	border-width: 4px;
+}
+#gallery a:hover img{
+	transform: scale(1.5, 1.5);
+}
+#brands a:hover img{
+	transform: scale(1.2, 1.2);
+}
+@media screen and (max-width: 800px){
+	.flex{
+		display: block;
+		text-align: center;
+	}
+	header nav, #banner-text span{
+		display: none;
+	}
+	header nav a, header nav a:hover{
+		display: inline-block;
+		width: 100%;
+		border: none;
+		margin: 0;
+		padding: 0 0 1em 0;
+	}
+	main aside{
+		margin: 0;
+	}
+	footer>section:not(:first-child) {
+		padding-left: 0;
+	}
+   
+}

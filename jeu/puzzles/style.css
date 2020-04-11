@@ -1,0 +1,60 @@
+*{
+	box-sizing: border-box;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+#loading{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+	color: #888;
+}
+
+#container{
+	padding: 2em;
+	display: none;
+	min-height: 100vh;
+}
+
+.blocPiece{
+	display: inline-block;
+	position: relative;
+	
+}
+.blocPiece img{
+	vertical-align: bottom;
+	box-shadow: 4px 4px 10px #456;
+}
+#pieces, #bg-plateau{
+	margin: 2em auto;
+	width: 600px;
+	
+}
+
+#bg-plateau{
+	background: url('./mountain/mountain.jpg') no-repeat top left;
+	background-size: cover;
+	border: 0 solid #00f;
+	box-sizing: content-box;
+}
+
+#plateau{
+	background: rgba(150,150,150,0.7);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.drop{
+	width: 100px;
+	height: 150px;
+	background-size: 100% 100%;
+	border: 0 solid #00f;
+}

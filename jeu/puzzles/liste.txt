@@ -1,0 +1,26 @@
+C:.
+|   index.php
+|   liste.txt
+|   style.css
+|   
+\---mountain
+    |   mountain.jpg
+    |   
+    \---pieces
+            27-11.jpg
+            27-12.jpg
+            27-13.jpg
+            27-14.jpg
+            27-21.jpg
+            27-22.jpg
+            27-23.jpg
+            27-24.jpg
+            27-31.jpg
+            27-32.jpg
+            27-33.jpg
+            27-34.jpg
+            27-41.jpg
+            27-42.jpg
+            27-43.jpg
+            27-44.jpg
+            

@@ -1,0 +1,130 @@
+:root{
+    --main-color: #a494fa;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--main-color);
+    font-size: 16px;
+}
+
+h1{
+    
+    animation-name: tournicoti;
+    animation-duration: 3s;
+}
+
+@keyframes tournicoti{
+    from{
+        font-size: 45em;
+        transform: rotate(900deg)
+    }
+    50%{
+        color: green;
+    }
+    to{
+        font-size: 3em;
+        transform: rotate(0deg)
+    }
+}
+
+#wrapper{
+    margin: auto;
+    max-width: 1200px;
+    background: white;
+    padding: 1em;
+}
+#gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+#gallery figure{
+    margin: 0;
+    position: relative;
+    width: 25%;
+    overflow: hidden;
+}
+#gallery img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+#gallery figcaption{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 2em;
+    padding: 0.5em; 
+    opacity: 0;
+    transition: height 1s, opacity 1s;
+}
+
+#gallery figure:hover figcaption{
+    height: 100%;
+    
+    
+    opacity: 1;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+footer>*{
+    flex: 1;
+    margin: 1em;
+}
+
+form input{
+    width: 100%;
+    padding: 0.5em 0.25em;
+}
+
+#partners{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.partner{
+    flex: 1;
+}
+
+.partner img{
+    width: 100%;
+}
+@media all and (max-width: 1024px){
+    #gallery figure{
+        width: 50%;
+    }
+
+}
+@media all and (max-width: 850px){
+    body{
+        font-size: 20px;
+    }
+
+    footer{
+        display: initial;
+    }
+    footer>*{
+        margin: 0;
+    }
+} 
+
+/*
+    balise : 1 pt
+    .class : 10 pts
+    #id    : 100 pts
+    !important : 1000000 pts (ACHTUNG !!)
+*/
+
+
