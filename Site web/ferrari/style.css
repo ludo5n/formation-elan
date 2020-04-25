@@ -1,0 +1,29 @@
+body{
+    width: 1467px;
+}
+*{
+   box-sizing: border-box;
+}
+#banniere_promo{
+    width:100%;
+    height:60px;
+    text-align:center;
+    
+}
+#mise_a_jour{
+    width:100%;
+    
+    height:60px;
+}
+#mise_a_jour h1{
+    text-align: center;
+    text-decoration:underline;
+
+}
+#nav_general{
+    display:flex;
+    text-decoration: none;
+}
+#nav_general div{
+    flex:1;
+}
