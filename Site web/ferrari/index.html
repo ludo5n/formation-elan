@@ -3,36 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <div id='mise_a_jour'>
-        <h1>NOUVELLE MISE A JOUR</h1>
+        <a href=""><h3>NOUVELLE MISE A JOUR</h3></a>
     </div>
     <div id='banniere_promo'>
-        <h2>LIVRAISON OFFERTE ET DELAI DE RETOUR PROLONGE A 60 JOURS </h2>
+        <h4>LIVRAISON OFFERTE ET DELAI DE RETOUR PROLONGE A 60 JOURS </h4>
     </div>
 <header>
     <nav id='nav_general'>
          <div>
-            <li><i class="fas fa-globe-americas"></i><h2>FR</h2></li>
-            <li><i class="fas fa-globe-americas"></i><h2>SERVICE CLIENTS</h2><i class="fas fa-angle-down"></i></li>
-            <li><i class="fas fa-map-marker-alt"></i><h2>POINT DE VENTE</h2></li>
+            <li class="hoverMebottom button"><ahref=""><i class="fas fa-globe-americas"></i> FR</a></li>
+            <li class="hoverMebottom button"><a href=""><i class="fas fa-globe-americas"></i>SERVICE CLIENTS<i class="fas fa-angle-down"></i></a></li>
+            <li class="hoverMebottom button"><a href=""><i class="fas fa-map-marker-alt"></i>POINT DE VENTE</a></li>
         </div>
         <div id ='logo'>
-            <img src="image/logo.jpg" alt="image logo ferrari" srcset="">
+            
+            <a href=""><img src="image/logo.jpg" alt="image logo ferrari" srcset=""></a>
         </div>
          <div>
-            <li><i class="far fa-gem"></i><h2> OWNERS AERA</h2></li>
-            <li><i class="fas fa-search"></i><h2>RECHERCHER</h2></li>
-            <li><i class="far fa-user"></i><h2>S IDENTIFIER</h2><li>
-            <li><i class="fas fa-cart-arrow-down"></i><h2>PANIER</h2></li>
+            <li class="hoverMebottom button"><a href=""><i class="far fa-gem"></i> OWNERS AERA</a></li>
+            <li class="hoverMebottom button"><a href=""><i class="fas fa-search"></i>RECHERCHER</a></li>
+            <li class="hoverMebottom button"><a href=""><i class="far fa-user"></i>S'IDENTIFIER</a><li>
+            <li class="hoverMebottom button"><a href=""><i class="fas fa-cart-arrow-down"></i>PANIER</a></li>
         </div>
+        <!-- <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div> -->
     </nav>
-    <div id='nav_principal'>
-
+    <ul id='nav_principal'>
+        <li class="hoverMebottom button"><a href="">HOMME</a></li>
+        <li class="hoverMebottom button"><a href="">FEMME</a></li>
+        <li class="hoverMebottom button"><a href="">ENFANT</a></li>
+        <li class="hoverMebottom button"><a href="">MONTRES</a></li>
+        <li class="hoverMebottom button"><a href="">LUNETTES</a></li>
+        <li class="hoverMebottom button"><a href="">OBJETS DE COLLECTION</a></li>
+        <li class="hoverMebottom button"><a href="">FOCUS ON</a></li>
     </div>
 </header>
+<main>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 6</div>
+          <img src="image/woar.jpg" style="width:100%">
+          <div class="text">Lamborghini</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 6</div>
+          <img src="image/fsp.jpg" style="width:100%">
+          <div class="text">Ferrari Sport</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 6</div>
+          <img src="image/ferrari-monza-sp1-ac-mondial-2018-03.jpg" style="width:100%">
+          <div class="text">Ferrari Mondza</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 6</div>
+          <img src="image/c0fbc53b2443fbd5d1d473d086313141.jpg" style="width:100%">
+          <div class="text">Ferrari Moto</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 6</div>
+          <img src="image/ferrari-modulo.jpg" style="width:100%">
+          <div class="text">Ferrari Modulo (à l'interieur)</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">6 / 6</div>
+          <img src="image/formule1.jpg" style="width:100%">
+          <div class="text">Ferrari Formule1!</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+        <ul class="slideshow">
+            <li><span></span></li>
+          <li><span>2</span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+        </ul>
+  </main>      
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+       <!-- -------------------------------------------------------------------- -->
+       
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+  
 </body>
 </html>

@@ -311,9 +311,9 @@ header nav li a {
       background:linear-gradient(rgba(0, 0, 255, 0.350),rgba(0, 128, 0, 0.400)), url(../img/ile.jpg) center/cover fixed;
 }
 html{
-      padding: 57px;
+     
       margin: auto;
-      width:1250px;
+     
 }
 #test{
      height: 3px;
