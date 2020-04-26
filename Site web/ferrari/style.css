@@ -60,6 +60,11 @@ nav div li{
 .fas, .far{
     margin-right: 8px;
 }
+#panel{
+  display: none;
+  display: flex;
+  flex-direction: column;
+}
 /* ------------------lien hover---------------------- */
 .button{
     border:0;
@@ -366,27 +371,11 @@ input[type=text]:focus, input[type=password]:focus {
   margin-bottom: 20px;
 }
 /* Overwrite default styles of hr */
-hr {
-  border: 1px solid #d12121;
-  /* margin-bottom: 15px; */
-  /* width:15px; */
-   display: block;
-    unicode-bidi: isolate;
-    margin-block-start: 0em;
-    margin-block-end: 0em; 
-    /* margin-inline-start: auto;
-    margin-inline-end: auto; */
-    /* overflow: hidden;
-    border-style: inset;
-    border-width: 1px; */
-    content: "";
-    width: 16px;
-    height: 3px;
-    background: #DA291C;
-    position: absolute;
-    top: 12px;
-    left: -30px;
-}
+
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
 
 /* Set a style for the submit button */
 .registerbtn {
@@ -414,32 +403,192 @@ a {
   background-color: #f1f1f1;
   text-align: center;
 }
-#telephone{
 
-}
- /* -------------------------------------------accordion--------------------------- */
- 
- .accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
+  
+/* --------------------------------------overlay---------------------------------- */
+body {
+  font-family: 'Lato', sans-serif;
 }
 
-.active, .accordion:hover {
-  background-color: #ccc;
-}
-
-.panel {
-  padding: 0 18px;
+.overlay {
+  height: 0%;
+  width: 30%;
+  position: absolute;
+  z-index: 1;
+  top: 220px;
+  right: 150px;
+  left :640px;
   background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  background-color: white;
+  overflow-y: hidden;
+  transition: 1s;
+}
+#overinscription{
+  display:flex;
+}
+#overinscription div{
+flex:1;
+text-align: justify;
+margin:10px;
+text-align: center;
+}
+.overlay-content {
+   /* position: relative;
+  top: 25%; */
+  /* width: 100%; */
+  text-align: center;
+  /* margin-top: 30px;  */
+  margin:50px;
+}
+#cheval img{
+  height:30px;
+}
+.overlay a,p {
+  padding: 8px;
+  text-decoration: none;
+  /* font-size: 36px; */
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+/* ------------------------------------------------button login and log------ */
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-image: url(../ferrari/image/ferrari\ xezri.jpg)center ;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
 }
