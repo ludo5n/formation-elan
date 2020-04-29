@@ -55,6 +55,7 @@
        
     </main>
     <div id='genre'>
+       <form action="connexion.php" method= "POST">   
         <p>SEXE</p>
 
         <label class="container">Femme
@@ -68,7 +69,7 @@
         <br>
     </div>
 <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
-  <form action="">  
+  
 <div class="custom-select" style="width:200px;">
     <select>
         <option value="0">Selectionnez un pays:</option>
@@ -92,14 +93,39 @@
         <input type="password" placeholder="Mot de passe (8-15 caractères)" name="psw" required>
         <input type="text" placeholder="Pseudo" name="pseudo" required>
         <input type="email" placeholder="Adresse E-mail" name="email" required>
-        <!-- <input type="text" placeholder="Confirmation Adresse E-mail" name="email-repeat" required> -->
-        <!-- <input type="text" placeholder="Confirmation Mot de passe" name="psw-repeat" required> -->
         <input type="number"placeholder="Tel" name="tel"required>
        
     </div>
-<button type="submit" class="registerbtn">S'INSCRIRE</button>
-    </form>
+    <input type="submit" value="Envoyer"> 
+   </form>
 </div>    
+    <!-- <button type="submit" class="registerbtn">S'INSCRIRE</button> -->
+<!--  
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "user";
+
+// try {
+//     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // $sql = "INSERT INTO MyGuests (firstname, lastname, email)
+    // VALUES ('John', 'Doe', 'john@example.com')";
+    // use exec() because no results are returned
+//     $sql = INSERT INTO `user`.`ferrari`(`radio`,`pays`,`prenom`,`name`,`psw`,`pseudo`,`email`,`tel`) VALUES ('M','Italie','$mike','loku','21457','$hjdfg','sgeijbeg@ca.com','24674642');
+//     $conn->exec($sql);
+//     echo "New record created successfully";
+//     }
+// catch(PDOException $e)
+//     {
+//     echo $sql . "<br>" . $e->getMessage();
+//     }
+
+// $conn = null;
+//  -->
+
+  
 
 
 <script>

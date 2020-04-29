@@ -1,0 +1,42 @@
+*** GESTION DE COMPTES BANCAIRES ***
+
+En orienté objet !
+
+Un compte bancaire est identifié par :
+- un libellé (compte courant, livret A, ...)
+- un solde initial
+- une devise monétaire
+- un titulaire unique
+
+Un titulaire est identifié par :
+- un nom
+- un prénom
+- une date de naissance
+- une ville
+- l'ensemble de ses comptes bancaires
+
+Sur un compte bancaire, on doit pouvoir :
+- crediter le compte de X euros
+- debiter le compte de X euros
+- effectuer un virement d'un compte à l'autre
+
+On doit pouvoir :
+- Afficher toutes les informations d'un(e) titulaire (dont l'âge) et l'ensemble des comptes appartenant à celui(celle)-ci
+- Afficher toutes les informations d'un compte bancaire (notamment le nom / prénom du titulaire du compte)
+
+*** GESTION DE FILMS ***
+
+Film : titre film, année de sortie, durée (en min), synopsis, réalisateur (1 seul réalisateur par film)
+Realisateur : nom, prenom, date de naissance
+Acteur : nom, prenom, date de naissance
+Role : nom du rôle
+Genre : nom du genre
+
+On doit pouvoir afficher :
+- tous les films d'un réalisateur ok
+- tous les films d'un acteur (film + nom du rôle) ok
+- tous les films d'un genre précis ok
+- la liste des rôles d'un acteur (nom du rôle et titre du film)ok
+- toutes les informations d'un film (titre, année, durée en HH:MM, genre, liste des acteurs (nom + prénom), réalisateur (nom + prénom))
+- la liste des acteurs ayant incarné un rôle précis (nom + prénom de l'acteur et film dans lequel le rôle a été incarné)
+
