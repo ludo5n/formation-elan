@@ -60,6 +60,7 @@ nav div li{
 .fas, .far{
     margin-right: 8px;
 }
+
 #panel{
   display: none;
   display: flex;
@@ -483,7 +484,10 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-
+button #deconnexion{
+  width:20%;
+  color: black;
+}
 /* Set a style for all buttons */
 button {
   background-color: #4CAF50;

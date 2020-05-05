@@ -1,5 +1,23 @@
+<?php session_start(); ?>
+<?php 
+// Si la personne est déjà connectée.
+// if(isset($_SESSION['user'])) {
+    // On lui adresse une erreur ailleurs qu'en URL.
+    // $_SESSION['error'] = "Vous n'avez rien à foutre là.";
+    // On le redirige.
+    // header('Location: index.php');
+// }
+// Si l'utilisateur n'a pas de token
+// if(!empty($_SESSION['token'])) {
+//     // On en créé un.
+//     $token = bin2hex(random_bytes(24));
+//     // On le met en session.
+//     $_SESSION['token'] = $token;
+// }
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,9 +72,9 @@
         <li>controler vos commandes et retours</li>
        
     </main>
-    <div id='genre'>
-       <form action="connexion.php" method= "POST">   
-        <p>SEXE</p>
+    <!-- <div id='genre'> -->
+       <form action="traitement-inscription.php" method= "post">   
+        <!-- <p>SEXE</p>
 
         <label class="container">Femme
         <input type="radio"  name="radio">
@@ -67,10 +85,10 @@
         <span class="checkmark"></span>
         </label>
         <br>
-    </div>
+    </div> -->
 <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
   
-<div class="custom-select" style="width:200px;">
+<!-- <div class="custom-select" style="width:200px;">
     <select>
         <option value="0">Selectionnez un pays:</option>
         <option value="1">FRANCE</option>
@@ -85,20 +103,21 @@
         <option value="10">JAPAON</option>
         <option value="11">RUSSIE</option>
         <option value="12">ANGLETERRE</option>
-    </select>
-    </div>
+    </select> -->
+    <!-- </div> -->
     <div id='grille'>
-        <input type="text" placeholder="Prénom" name="prenom" required>
-        <input type="text" placeholder="Nom" name="name" required>
-        <input type="password" placeholder="Mot de passe (8-15 caractères)" name="psw" required>
+        <!-- <input type="text" placeholder="Prénom" name="prenom" required>
+        <input type="text" placeholder="Nom" name="name" required> -->
         <input type="text" placeholder="Pseudo" name="pseudo" required>
-        <input type="email" placeholder="Adresse E-mail" name="email" required>
-        <input type="number"placeholder="Tel" name="tel"required>
-       
-    </div>
+        <input type="password" placeholder="Mot de passe (8-15 caractères)" name="psw" required>
+        <input type="password" placeholder="Confirmez le mot de passe" name="psw-repeat" required>
+        <!-- <input type="email" placeholder="Adresse E-mail" name="email" required>
+        <input type="number"placeholder="Tel" name="tel"required> -->
+        </div>
+        <!-- <input type="hidden" name="token" value="<?= $token ?>"> -->
     <input type="submit" value="Envoyer"> 
    </form>
-</div>    
+<!-- </div>     -->
     <!-- <button type="submit" class="registerbtn">S'INSCRIRE</button> -->
 <!--  
 // $servername = "localhost";
