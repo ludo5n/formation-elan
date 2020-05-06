@@ -1,16 +1,17 @@
 <?php
           
           session_start();
-        //   require_once 'fonctions.php';
+          require_once 'fonctions.php';
           // Si l'utilisation est connecté, il dégage.
-        //   if(logged()) {
-        //       header('Location: index.php');
-        //   }
+          if(logged()) {
+              header('Location: index.php');
+          }
           // Si le formulaire n'est pas vide (si le mec a pas tapé l'URL).
           if(!empty($_POST)) {
                   
               // On vérifie le token (cf : faille CSRF).
-                 //       if($_POST['token'] === $_SESSION['token']) {
+                       if($_POST['token'] === $_SESSION['token']) {
+                         
                   // On vérifie l'intégrité des input.
                   $f_pseudo = trim(filter_input(INPUT_POST, 'pseudo', FILTER_VALIDATE_REGEXP,
                   ["options" => array("regexp" => '/[A-Za-z0-9]{6,32}/')]));
@@ -66,10 +67,10 @@
                         header("Location:inscription.php?champs non conformes");
                       // Champs non conformes.
                   }
-        //       } else {
-        //         header("Location:inscription.php?error=token expiré,hacker");
-        //           // Token expiré ou hackeur de merde.
-        //       }
+              } else {
+                header("Location:inscription.php?error=token expiré,hacker");
+                  // Token expiré ou hackeur de merde.
+              }
           } else {
                   header("Location:index.php?error= url tapé a la main");
                 

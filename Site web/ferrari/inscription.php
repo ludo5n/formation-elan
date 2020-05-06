@@ -8,12 +8,14 @@
     // header('Location: index.php');
 // }
 // Si l'utilisateur n'a pas de token
-// if(!empty($_SESSION['token'])) {
+if(isset($_SESSION['token'])) {
 //     // On en créé un.
-//     $token = bin2hex(random_bytes(24));
-//     // On le met en session.
-//     $_SESSION['token'] = $token;
-// }
+    $token = bin2hex(random_bytes(24));
+    
+// On le met en session.
+    $_SESSION['token'] = $token;
+    
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +24,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ferrari.style.css">
     <title>Document</title>
 </head>
 <body>
@@ -41,7 +43,7 @@
         </div>
         <div id ='logo'>
             
-            <a href="index.html"><img src="image/logo.jpg" alt="image logo ferrari" srcset=""></a>
+            <a href="index.php"><img src="image/logo.jpg" alt="image logo ferrari" srcset=""></a>
         </div>
          <div>
             <li class="hoverMebottom button"><a href=""><i class="far fa-gem"></i> OWNERS AERA</a></li>
@@ -114,7 +116,7 @@
         <!-- <input type="email" placeholder="Adresse E-mail" name="email" required>
         <input type="number"placeholder="Tel" name="tel"required> -->
         </div>
-        <!-- <input type="hidden" name="token" value="<?= $token ?>"> -->
+        <input type="hidden" name="token" id="token" value="<?php echo $token; ?>" />
     <input type="submit" value="Envoyer"> 
    </form>
 <!-- </div>     -->

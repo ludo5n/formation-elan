@@ -21,7 +21,7 @@ if(!logged()) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ferrari.style.css">
     <title>Document</title>
 </head>
 <body>
@@ -52,18 +52,17 @@ if(!logged()) {
         <?php 
               echo"<h3>Bienvenue ",$_SESSION["user"]["pseudo"]," !!</h3>";
         ?>
-         <button id="deconnexion" type="submit"><a  href="log-out.php"><i class="fas fa-times">déconnexion</a></i></button> 
+         <button id="deconnexion"><a  href="log-out.php">déconnexion</a></button>
               <a href=""><img src="image/logo.jpg" alt="image logo ferrari" srcset=""></a>
         </div>
          <div>
             <li class="hoverMebottom button"><a href=""><i class="far fa-gem"></i> OWNERS AERA</a></li>
             <li class="hoverMebottom button"><a href=""><i class="fas fa-search"></i>RECHERCHER</a></li>
             <!-- <li class="hoverMebottom button"><a href=""><i class="far fa-user"></i>S'IDENTIFIER</a> -->
-           
-             
+                       
               <li class="hoverMebottom button"><a href=""><i class="fas fa-cart-arrow-down"></i>PANIER</a></li>
-        </div>
         
+        </div>
         <!-- <div class="panel">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div> -->

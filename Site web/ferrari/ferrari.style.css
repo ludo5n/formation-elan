@@ -397,6 +397,7 @@ input[type=text]:focus, input[type=password]:focus {
 /* Add a blue text color to links */
 a {
   color: dodgerblue;
+  
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
@@ -484,8 +485,14 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-button #deconnexion{
-  width:20%;
+ button#deconnexion{
+  width: 30%;
+  border-radius: 5px;
+  
+  
+  
+}
+#deconnexion a {
   color: black;
 }
 /* Set a style for all buttons */

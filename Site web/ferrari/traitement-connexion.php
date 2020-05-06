@@ -4,14 +4,14 @@
 session_start();
 require_once 'fonctions.php';
 // Si l'utilisation est connecté, il dégage.
-//   if(logged()) {
-//       header('Location: index.php');
-//   }
+  if(logged()) {
+      header('Location: index.php');
+  }
 // Si le formulaire n'est pas vide (si le mec a pas tapé l'URL).
 if(!empty($_POST)) 
 {
-        // On vérifie le token (cf : faille CSRF).
-       //       if($_POST['token'] === $_SESSION['token']) {
+        // On vérifie le token (cf : faille CSRF cross site request forgery ( forcer un  utilisateur a repondre a une requetes forger a son insu)).
+             if($_POST['token'] === $_SESSION['token']) {
         // On vérifie l'intégrité des input.
         $f_pseudo = trim(filter_input(INPUT_POST, 'pseudo', FILTER_VALIDATE_REGEXP,
         ["options" => array("regexp" => '/[A-Za-z0-9]{6,32}/')]));
@@ -30,22 +30,22 @@ if(!empty($_POST))
                               // On  veut savoir si le pseudo existe déjà.
                               $req='SELECT * 
                               FROM ferrari
-                              WHERE pseudo = "'.$f_pseudo.'"';
-                              $statement = $bdd->query($req);
-                              $reponse = $statement->fetch();
+                              WHERE pseudo = "'.$f_pseudo.'"';//recuperation de la liste des pseudo
+                              $statement = $bdd->query($req);//execution de la requete
+                              $reponse = $statement->fetch(); //fetch cherche le resultat demander dans un tableau
                              if($reponse )
                              {                             
                               // S'il existe , on continue.
                                        
-                                if (password_verify($f_password,$reponse['psw'])) 
+                                if (password_verify($f_password,$reponse['psw'])) //si le password est la meme que celui de la bdd
                                 {
-                                    $_SESSION['user'] = $reponse;
-                                    header("Location: bienvenue.php");
+                                    $_SESSION['user'] = $reponse; //on stoke le resultat dans la session
+                                    header("Location: bienvenue.php");//redirection vers la page de bienvenue
                                 } else{
-                                    header("Location: index.php?error=2mdpincorrect");
+                                    header("Location: index.php?error=2mdpincorrect");//redirection vers la page d'aceuil si le mot de passe ne correspond pas
                                 }
                             } else{
-                                header("Location: index.php?error=loginIncorrect");
+                                header("Location: index.php?error=loginIncorrect");//redirection vers la page d'acceuil si le login ne correspond pas
                             }                                   
                } catch (PDOException $e) {
                $e->getMessage();
@@ -58,10 +58,9 @@ if(!empty($_POST))
         }
       
     } else {
-            header("Location:index.php?error=0 url tapé a la main");
-   
+            header("Location:index.php?error=0 url tapé a la main"); // si l'utilisateur est un pirate
+            }
 }
-
 ?> 
 
 
