@@ -6,7 +6,7 @@ if(isset($_SESSION['token'])) {
       
   // On le met en session.
       $_SESSION['token'] = $token;
-      var_dump( $_SESSION['token'] = $token);
+     
   }
   ?>
   <?php
@@ -197,7 +197,7 @@ if(isset($_SESSION['token'])) {
           
         <input type="submit" value="envoyer">
         <label>
-          <input type="checkbox" name="remember"> Remember me
+          <input type="checkbox" name="auto"> Se souvenir de moi
         </label>
         <input type="hidden" name="token" id="token" value="<?php echo $token; ?>" />
       </div>
@@ -207,6 +207,11 @@ if(isset($_SESSION['token'])) {
         <span class="psw">Forgot <a href="#">password?</a></span>
       </div>
     </form>
+   <?php if(!empty($_POST['auto'])){
+                                     $fonc=setcookie('auth', $user['secreto'], time() + 364*24*3600, '/', null, false, true);
+                                        $_POST['pseudo']=$fonc;
+                                    }
+                                    ?>
   </div>
   <!-- -------------------------------------overlay script ----------------------------- -->
   <script>

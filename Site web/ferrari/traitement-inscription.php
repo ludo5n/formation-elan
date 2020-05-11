@@ -2,6 +2,7 @@
           
           session_start();
           require_once 'fonctions.php';
+          require ('cookies.php');
           // Si l'utilisation est connecté, il dégage.
           if(logged()) {
               header('Location: index.php');
@@ -32,19 +33,23 @@
                                           require 'connexion.php';                                     
                                         // On  veut savoir si le pseudo existe déjà.
                                         $login = $bdd->query('SELECT pseudo
-                                                              FROM user.ferrari
+                                                              FROM ferrari
                                                               WHERE pseudo = "'.$f_pseudo.'"');
                                         $login = $login->fetch();
                                         // S'il n'existe pas, on continue.
                                                  if(!$login) {
                                                                         //     // Chiffrement.
+
                                                         $password = password_hash($f_password, PASSWORD_BCRYPT); 
+                                                        $bytes = random_bytes(255);
+                                                        $secret = password_hash($bytes, PASSWORD_BCRYPT);
+                                                        
                                                         // Insertion.
                                                          try {
                                                                         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                                                                         // $insert = $bdd->prepare('INSERT INTO `user`.`ferrari` (`pseudo`, `psw`) VALUES(`:pseudo`, `:psw`)');
-                                                                        $stmt = $bdd->prepare("INSERT INTO user.ferrari (pseudo, psw) VALUES (:pseudo, :psw)");
-                                                                        $stmt->execute(array("pseudo"=>$f_pseudo,"psw"=>$password));
+                                                                        $stmt = $bdd->prepare("INSERT INTO ferrari (pseudo, psw,secreto) VALUES (:pseudo, :psw,:secreto)");
+                                                                        $stmt->execute(array("pseudo"=>$f_pseudo,"psw"=>$password,"secreto"=>$secret));
                                                                         echo "New inscription réussie!";
                                                                         // $_SESSION['error'] = "Inscription réussie !";
                                                                         // header('Location: index.php');

@@ -2,11 +2,15 @@
 <?php
  
 session_start();
+require 'cookies.php';
 require_once 'fonctions.php';
 // Si l'utilisation est connecté, il dégage.
   if(logged()) {
       header('Location: index.php');
   }
+
+
+
 // Si le formulaire n'est pas vide (si le mec a pas tapé l'URL).
 if(!empty($_POST)) 
 {
@@ -40,6 +44,11 @@ if(!empty($_POST))
                                 if (password_verify($f_password,$reponse['psw'])) //si le password est la meme que celui de la bdd
                                 {
                                     $_SESSION['user'] = $reponse; //on stoke le resultat dans la session
+                                    if(isset($_POST['auto'])){
+                                        setcookie('auth', $user['secreto'], time() + 364*24*3600, '/', null, false, true);
+                                        $_POST['pseudo']=$user['secreto'];
+                                    }
+                                    
                                     header("Location: bienvenue.php");//redirection vers la page de bienvenue
                                 } else{
                                     header("Location: index.php?error=2mdpincorrect");//redirection vers la page d'aceuil si le mot de passe ne correspond pas
